@@ -99,15 +99,14 @@ function App() {
           >
             <GPAChart gpa={gpa} />
             <div className="flex flex-col items-center">
-              <div className="text-base sm:text-lg font-semibold text-gray-700">Total Credits</div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-blue-700">{totalCredits}</div>
+              <div className="text-base sm:text-lg mt-5 font-semibold text-gray-700">Total Credits</div>
+              <div className="text-3xl font-bold text-blue-500">{totalCredits}</div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="w-full text-center py-2  mt-auto"> {/* Removed fixed positioning */}
+      <footer className="w-full text-center py-2  mt-auto">
         <p className="font-medium text-gray-600 text-xs sm:text-sm">
           &copy; {new Date().getFullYear()} Mohamed Elsoraky. All rights reserved.
         </p>
