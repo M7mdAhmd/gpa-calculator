@@ -108,7 +108,7 @@ function App() {
 
       <footer className="w-full text-center py-2  mt-auto">
         <p className="font-medium text-gray-600 text-xs sm:text-sm">
-          &copy; {new Date().getFullYear()} Mohamed Elsoraky. All rights reserved.
+          &copy; {new Date().getFullYear()} Mohamed Elshoraky. All rights reserved.
         </p>
       </footer>
     </div>
