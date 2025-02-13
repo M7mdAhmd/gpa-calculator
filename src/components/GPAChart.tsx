@@ -7,15 +7,14 @@ interface GPAChartProps {
 
 export const GPAChart: React.FC<GPAChartProps> = ({ gpa }) => {
   const maxGPA = 4.0;
-  const strokeProgress = (gpa / maxGPA) * 283; // Convert GPA to stroke dash offset
-  const strokeOpacity = gpa === 0 ? 0 : 1; // Fully invisible at 0, appears after
-  const minStrokeFill = 20; // Ensures low GPA is still slightly visible
+  const strokeProgress = (gpa / maxGPA) * 283; 
+  const strokeOpacity = gpa === 0 ? 0 : 1; 
+  const minStrokeFill = 20; 
 
-  // Interpolating between #9ac0ff (light blue) and #3b82f6 (deep blue)
   const interpolateColor = (value: number) => {
-    const r = Math.round(154 + (59 - 154) * value); // Transition from 154 → 59
-    const g = Math.round(192 + (130 - 192) * value); // Transition from 192 → 130
-    const b = Math.round(255 + (246 - 255) * value); // Transition from 255 → 246
+    const r = Math.round(154 + (59 - 154) * value); 
+    const g = Math.round(192 + (130 - 192) * value);
+    const b = Math.round(255 + (246 - 255) * value)
     return `rgb(${r}, ${g}, ${b})`;
   };
 
@@ -35,7 +34,7 @@ export const GPAChart: React.FC<GPAChartProps> = ({ gpa }) => {
           cy="50"
           r="45"
           fill="none"
-          stroke="#e5e7eb" // Light gray background
+          stroke="#d2e3ff"
           strokeWidth="10"
         />
         <motion.circle
@@ -43,7 +42,7 @@ export const GPAChart: React.FC<GPAChartProps> = ({ gpa }) => {
           cy="50"
           r="45"
           fill="none"
-          stroke={strokeColor} // Dynamic color transition
+          stroke={strokeColor}
           strokeWidth="10"
           strokeLinecap="round"
           strokeDasharray="283"
